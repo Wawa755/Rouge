@@ -1,8 +1,2 @@
-h1 {
-    color: red;
-  }
-  
-  body {
-    background-color: rgb(214, 11, 11);
-  }
-  
+@use "abstract/mixins";
+
