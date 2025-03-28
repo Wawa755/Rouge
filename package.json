@@ -20,7 +20,12 @@
   "homepage": "https://github.com/Wawa755/Rouge#readme",
   "description": "",
   "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
     "sass": "^1.85.1",
     "vite": "^6.2.0"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
   }
 }
