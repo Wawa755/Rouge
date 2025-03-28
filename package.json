@@ -25,6 +25,8 @@
     "vite": "^6.2.0"
   },
   "dependencies": {
+    "@mantine/core": "^7.17.3",
+    "@mantine/hooks": "^7.17.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   }
