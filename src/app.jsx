@@ -1,14 +1,13 @@
-import React from 'react';
-import './sass/styles.scss';
-import Demo from './react/components/buttons/button';
+import React from "react";
+import "./sass/styles.scss";
+import DesignSystem from "./react/pages/DesignSystem";
+
 const App = () => {
   return (
     <div>
-      <h1 className="Hello">Helloooooooo</h1>
-      <Demo />
+      <DesignSystem />
     </div>
   );
 };
-
 
 export default App;
