@@ -19,6 +19,8 @@ import {
   ContinueWithAppleIconButton,
 } from "../components/buttons/IconButtons";
 
+import { BasketButton } from "../components/buttons/BasketButton";
+
 const DesignSystem = () => {
   return (
     <MantineProvider withGlobalStyles withNormalizeCSS>
@@ -45,6 +47,11 @@ const DesignSystem = () => {
           <ContinueWithFacebookIconButton />
           <ContinueWithGoogleIconButton />
           <ContinueWithAppleIconButton />
+        </Group>
+
+        <h2>Standalone Basket Button</h2>
+        <Group mt="xl">
+          <BasketButton />
         </Group>
       </div>
     </MantineProvider>
