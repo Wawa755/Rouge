@@ -1,0 +1,41 @@
+@use "/src/sass/abstract/colors" as *;
+
+.initial-page {
+  padding: 2rem;
+  text-align: center;
+
+  h1 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .design-system-btn {
+    background-color: $magenta;
+    color: $white-elements;
+    transition: background-color 0.2s ease;
+    border: none;
+
+    &:hover {
+      background-color: lighten($magenta, 10%);
+    }
+  }
+
+  .prototype-btn {
+    background-color: $red;
+    color: $white-elements;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+    border: none;
+
+    &:hover {
+      background-color: darken($red, 10%);
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@use "/src/sass/abstract/colors" as *;
+
+// Set each slide as a relative container
+.carousel .slide {
+  border: none;
+  position: relative; // Allows absolute positioning of children
+}
+
+.carousel-wrapper {
+  width: 100%;
+  max-width: 100%; // Adjust the max-width as needed
+}
+
+/* Position the pagination dots container on top of the image at the bottom */
+.carousel .control-dots {
+  position: absolute;
+  left: 50%; // Center horizontally within the slide
+  bottom: 5%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+/* Style each dot */
+.carousel .control-dots .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+  margin: 0 5px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s,
+    transform 0.3s;
+}
+
+/* Style the active (selected) dot */
+.carousel .control-dots .dot.selected {
+  background-color: $red; // Uses your defined red color from colors
+  width: 18px;
+  border-radius: 60%;
+}

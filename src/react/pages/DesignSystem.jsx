@@ -18,8 +18,9 @@ import {
   ContinueWithGoogleIconButton,
   ContinueWithAppleIconButton,
 } from "../components/buttons/IconButtons";
-
 import { BasketButton } from "../components/buttons/BasketButton";
+import SimpleCarousel from "../components/carousel/Carousel";
+import Stepper from "../components/stepper/stepper";
 
 const DesignSystem = () => {
   return (
@@ -49,10 +50,16 @@ const DesignSystem = () => {
           <ContinueWithAppleIconButton />
         </Group>
 
-        <h2>Standalone Basket Button</h2>
+        <h2>Basket Button</h2>
         <Group mt="xl">
           <BasketButton />
         </Group>
+
+        <h2>Carousel</h2>
+        <SimpleCarousel />
+
+        <h2>Stepper</h2>
+        <Stepper />
       </div>
     </MantineProvider>
   );
