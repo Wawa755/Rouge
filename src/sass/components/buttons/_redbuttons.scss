@@ -1,5 +1,6 @@
 @use "/src/sass/abstract/colors" as *;
 
+// Default styles for Desktop (Website)
 // CHECKOUT BUTTON
 button.mantine-Button-root.checkout-button {
   background-color: $red;
@@ -56,6 +57,25 @@ button.mantine-Button-root.log-in-button {
   }
 }
 
+// WHITE LOG IN BUTTON
+button.mantine-Button-root.white-log-in-button {
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+  font-size: 1.1rem;
+  width: 300px;
+  height: 50px;
+  padding: 0.2rem 2rem;
+  border-radius: 2rem;
+  transition:
+    background-color 0.2s ease,
+    opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.95;
+  }
+}
+
 // SIGN UP BUTTON
 button.mantine-Button-root.sign-up-button {
   background-color: $red;
@@ -63,8 +83,9 @@ button.mantine-Button-root.sign-up-button {
   font-weight: bold;
   font-size: 1.1rem;
   width: 300px;
+  height: 50px;
   padding: 0.2rem 1rem;
-  border-radius: 1rem;
+  border-radius: 2rem;
   transition:
     background-color 0.2s ease,
     opacity 0.2s ease;
@@ -109,5 +130,27 @@ button.mantine-Button-root.more-info-button {
 
   &:hover {
     opacity: 0.95;
+  }
+}
+
+/* Tablet styles (min-width: 601px and max-width: 1024px) */
+@media screen and (max-width: 1024px) and (min-width: 601px) {
+  button.mantine-Button-root.checkout-button,
+  button.mantine-Button-root.confirm-purchase-button,
+  button.mantine-Button-root.log-in-button,
+  button.mantine-Button-root.sign-up-button,
+  button.mantine-Button-root.continue-button,
+  button.mantine-Button-root.more-info-button,
+  button.mantine-Button-root.white-log-in-button {
+    width: 200px;
+    font-size: 1.05rem; // Slightly adjust font size for tablet
+  }
+
+  // Remove fixed heights if necessary for a more flexible layout
+  button.mantine-Button-root.checkout-button,
+  button.mantine-Button-root.confirm-purchase-button,
+  button.mantine-Button-root.continue-button,
+  button.mantine-Button-root.more-info-button {
+    height: auto;
   }
 }

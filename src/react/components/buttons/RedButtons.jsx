@@ -7,9 +7,6 @@ import "@/sass/components/buttons/_redbuttons.scss";
  *
  * This is our custom Check-out button. We’re using Mantine's <Button> component
  * and injecting our own class ('checkout-button') into its internal .mantine-Button-root.
- *
- * FYI: Mantine styles its components with Emotion and CSS modules, so using just the
- * className prop wouldn’t let us override things like padding, color, or hover effects.
  */
 export function CheckoutButton(props) {
   return (
@@ -25,8 +22,6 @@ export function CheckoutButton(props) {
  * This button is for confirming a purchase. We inject our custom class
  * 'confirm-purchase-button' so we can have full control over its dimensions,
  * border-radius, and hover color.
- *
- * Basically, it gives us the flexibility to style it exactly how we need.
  */
 export function ConfirmPurchaseButton(props) {
   return (
@@ -46,6 +41,20 @@ export function ConfirmPurchaseButton(props) {
 export function LogInButton(props) {
   return (
     <Button classNames={{ root: "log-in-button" }} {...props}>
+      Log in
+    </Button>
+  );
+}
+
+/**
+ * WhiteLogInButton
+ *
+ * This variant of the Log In button uses the 'white-log-in-button' class,
+ * which you can style for a white background with black text.
+ */
+export function WhiteLogInButton(props) {
+  return (
+    <Button classNames={{ root: "white-log-in-button" }} {...props}>
       Log in
     </Button>
   );

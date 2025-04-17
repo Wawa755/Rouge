@@ -172,3 +172,23 @@ button.mantine-Button-root.continue-with-apple-icon-button {
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
   }
 }
+
+// SEE MORE BUTTON
+button.mantine-Button-root.see-more-button {
+  background-color: transparent;
+  color: $magenta;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-radius: none;
+  width: auto;
+  height: auto;
+  padding: 0.4rem 1rem;
+  border: none;
+  transition:
+    background-color 0.2s ease,
+    opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.95;
+  }
+}

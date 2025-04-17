@@ -204,3 +204,16 @@ export function ContinueWithAppleIconButton(props) {
     </Button>
   );
 }
+
+/**
+ * SeeMoreButton
+ *
+ * A custom button for "See more >" action.
+ */
+export function SeeMoreButton(props) {
+  return (
+    <Button classNames={{ root: "see-more-button" }} {...props}>
+      See more &gt;
+    </Button>
+  );
+}
