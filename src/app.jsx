@@ -1,34 +1,24 @@
-import React, { useEffect, useState } from "react";
-import "./sass/styles.scss";
-import DesignSystem from "./react/pages/DesignSystem";
-import axios from "axios";
+// App.jsx
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import InitialPage from './react/pages/InitialPage';
+import DesignSystem from './react/pages/DesignSystem';
+import AnimationPage from './react/pages/AnimationPage';
+import HomeScreen from './react/pages/HomeScreen';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
-const App = () => {
-  const [status, setStatus] = useState("Connecting...");
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    axios
-      .get("http://localhost:8000/api/ping")
-      .then((response) => {
-        setStatus(response.data.message);
-      })
-      .catch((err) => {
-        console.error("API connection error:", err);
-        setStatus("Connection failed");
-        setError(err.message);
-      });
-  }, []);
-
+function App() {
   return (
-    <div>
-      <div>
-        <p>Status: {status}</p>
-        {error && <p style={{ color: "red" }}>Error: {error}</p>}
-      </div>
-      <DesignSystem />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<InitialPage />} />
+        <Route path="/design-system" element={<DesignSystem />} />
+        <Route path="/animation" element={<AnimationPage />} />
+        <Route path="/homescreen" element={<HomeScreen />} />
+      </Routes>
+    </BrowserRouter>
   );
-};
+}
 
 export default App;
