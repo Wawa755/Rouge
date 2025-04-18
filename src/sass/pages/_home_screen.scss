@@ -1,4 +1,4 @@
-@use "/src/sass/abstract/colors" as *;
+@use '/src/sass/abstract/colors' as *;
 
 .section-carousel {
   .carousel-container {
@@ -13,10 +13,10 @@
 }
 
 .section-two {
-  background-color: #000; // Black background
-  color: #fff; // White text for proper contrast
+  background-color: #000;
+  color: #fff;
   text-align: left;
-  padding: 1rem; // Adjust padding as needed
+  padding: 1rem;
 
   h1 {
     margin-bottom: 1rem;
@@ -59,8 +59,8 @@
 }
 
 .section-four {
-  background-color: $red; // Red background (make sure $red is defined in your colors file)
-  color: $white-elements; // White text for general content
+  background-color: $red;
+  color: $white-elements;
   text-align: left;
   padding: 1rem;
 
@@ -74,11 +74,10 @@
       font-size: 1.5rem;
     }
 
-    // Override styles for See More button in section four
     button.mantine-Button-root.see-more-button {
       background-color: transparent;
-      color: #000; // Black text color
-      border: none; // Black border
+      color: #000;
+      border: none;
 
       &:hover {
         opacity: 0.95;
@@ -88,5 +87,36 @@
 
   p {
     font-size: 1rem;
+  }
+}
+
+.card-scroll-wrapper {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  padding-bottom: 1rem;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  > * {
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+  }
+
+  // ✅ Apply square layout only to square card wrapper
+  &.non-trending-wrapper > * {
+    width: 240px;
+    height: 240px;
+    flex-shrink: 0;
+
+    .mantine-Card-root {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
   }
 }

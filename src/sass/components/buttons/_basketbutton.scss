@@ -1,7 +1,10 @@
-@use "/src/sass/abstract/colors" as *;
+@use '/src/sass/abstract/colors' as *;
 
 .basket-button {
-  background-color: rgba($red, 0.9);
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: rgba($red, 0.8);
   border-radius: 0 0 1rem 1rem;
   width: 70px;
   height: 80px;
